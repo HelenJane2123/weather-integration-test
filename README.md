@@ -89,3 +89,6 @@ tests/
 └── Feature/
     ├── WeatherControllerTest.php
     └── WeatherServiceTest.php
+
+## Command to run unit test
+php artisan test
