@@ -58,25 +58,34 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## weather-test integration
+## Weather-Test Integration
 .env
-    OPENWEATHER_API_KEY=generate_api_key
+    OPENWEATHER_API_KEY=your_generated_api_key
     OPENWEATHER_BASE=https://api.openweathermap.org/data/2.5/weather
     APP_TIMEZONE=Asia/Manila
-app/Controller
-    -> WeatherController.php
-app/Services
-    ->WeatherServices.php
-config
-    ->services.php
-routes
-    ->web.php
-storage
-    ->logs.php
-resources
-    ->views
-        ->weather->index.blade.php
-tests
-    ->Feature
-        ->WeatherControllerTest.php
-        ->WeatherServiceTest.php
+
+## Project Structure
+app/
+├── Controllers/
+│   └── WeatherController.php
+├── Services/
+│   └── WeatherService.php
+
+config/
+└── services.php
+
+routes/
+└── web.php
+
+storage/
+└── logs/ 
+
+resources/
+└── views/
+    └── weather/
+        └── index.blade.php
+
+tests/
+└── Feature/
+    ├── WeatherControllerTest.php
+    └── WeatherServiceTest.php
